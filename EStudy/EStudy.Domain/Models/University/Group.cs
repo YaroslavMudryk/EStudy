@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EStudy.Domain.Models.University
 {
@@ -13,5 +14,6 @@ namespace EStudy.Domain.Models.University
         [Required, StringLength(25, MinimumLength = 25)]
         public string InviteLink { get; set; }
         public string ManagmentPayload { get; set; }
+        public List<GroupStudent> GroupStudents { get; set; }
     }
 }
