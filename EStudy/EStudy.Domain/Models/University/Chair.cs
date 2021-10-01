@@ -11,10 +11,8 @@ namespace EStudy.Domain.Models.University
         public string EnName { get; set; }
         [StringLength(250)]
         public string Logo { get; set; }
-        [StringLength(20000)]
-        public string AboutPayload { get; set; }
-        [StringLength(2500)]
-        public string ManagementPayload { get; set; }
+        public int? AboutPayloadId { get; set; }
+        public int? ManagementPayloadId { get; set; }
         public int InstituteId { get; set; }
         public Institute Institute { get; set; }
         public List<Specialty> Specialties { get; set; }
