@@ -3,6 +3,7 @@
     public enum PayloadType
     {
         Html,
-        Json
+        Json,
+        Markdown
     }
 }
