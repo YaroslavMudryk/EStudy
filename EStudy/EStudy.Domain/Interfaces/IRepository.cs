@@ -18,9 +18,9 @@ namespace EStudy.Domain.Interfaces
         Task RemoveRangeAsync(List<TEntity> entities);
         Task<int> CountAsync();
         Task<int> CountAsync(Expression<Func<TEntity, bool>> match);
-        Task<List<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> match);
-        Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> match);
         Task<TEntity> GetByIdAsync(Id id);
+        Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> match);
+        Task<List<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> match);
         Task<List<TEntity>> GetAllAsync(int offset, int count);
     }
 }
