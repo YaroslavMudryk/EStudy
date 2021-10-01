@@ -13,6 +13,8 @@ namespace EStudy.Domain.Models.University
         public string Info { get; set; }
         [StringLength(1000, MinimumLength = 5)]
         public string PdfDocument { get; set; }
+        public int ChairId { get; set; }
+        public Chair Chair { get; set; }
         public List<Group> Groups { get; set; }
     }
 }

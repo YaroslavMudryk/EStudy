@@ -14,6 +14,8 @@ namespace EStudy.Domain.Models.University
         [Required, StringLength(25, MinimumLength = 25)]
         public string InviteLink { get; set; }
         public string ManagmentPayload { get; set; }
+        public int SpecialtyId { get; set; }
+        public Specialty Specialty { get; set; }
         public List<GroupStudent> GroupStudents { get; set; }
     }
 }

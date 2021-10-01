@@ -15,6 +15,8 @@ namespace EStudy.Domain.Models.University
         public string AboutPayload { get; set; }
         [StringLength(2500)]
         public string ManagementPayload { get; set; }
+        public int InstituteId { get; set; }
+        public Institute Institute { get; set; }
         public List<Specialty> Specialties { get; set; }
         public List<ChairTeacher> ChairTeachers { get; set; }
     }
