@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EStudy.Domain.Models.Identity
 {
@@ -16,5 +17,7 @@ namespace EStudy.Domain.Models.Identity
         public string Avatar { get; set; }
         [Required, StringLength(20, MinimumLength = 3)]
         public string Username { get; set; }
+        public List<UserLogin> UserLogins { get; set; }
+        public List<UserRole> UserRoles { get; set; }
     }
 }

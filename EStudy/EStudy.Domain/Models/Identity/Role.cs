@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EStudy.Domain.Models.Identity
 {
@@ -10,5 +11,6 @@ namespace EStudy.Domain.Models.Identity
         public string SystemName { get; set; }
         [Required]
         public int LvlAccess { get; set; }
+        public List<UserRole> UserRoles { get; set; }
     }
 }
