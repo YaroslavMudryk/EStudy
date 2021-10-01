@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EStudy.Domain.Interfaces
 {
-    public interface IRepository<TEntity, Id> where TEntity : BaseModel<Id>
+    public interface IRepository<TEntity, Id>: IDisposable where TEntity : BaseModel<Id>
     {
         Task<TEntity> CreateAsync(TEntity entity);
         Task CreateAsync(List<TEntity> entities);
@@ -18,7 +18,6 @@ namespace EStudy.Domain.Interfaces
         Task RemoveRangeAsync(List<TEntity> entities);
         Task<int> CountAsync();
         Task<int> CountAsync(Expression<Func<TEntity, bool>> match);
-        Task<TEntity> GetByIdAsync(Id id);
         Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> match);
         Task<List<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> match);
         Task<List<TEntity>> GetAllAsync(int offset, int count);
