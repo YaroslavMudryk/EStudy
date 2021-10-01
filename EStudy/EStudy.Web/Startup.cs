@@ -1,3 +1,4 @@
+using EStudy.IoC;
 using EStudy.Web.App.Responses;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +33,7 @@ namespace EStudy.Web
                 x.ReportApiVersions = true;
                 x.ErrorResponses = new ErrorApiVersioningResponse();
             });
+            services.AddServices(Configuration.GetConnectionString("SqlServer"));
             services.AddControllersWithViews();
         }
 
