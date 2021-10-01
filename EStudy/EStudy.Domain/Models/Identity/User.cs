@@ -2,7 +2,7 @@
 
 namespace EStudy.Domain.Models.Identity
 {
-    public class User
+    public class User : BaseModel<int>
     {
         [Required, StringLength(250)]
         public string FullName { get; set; }
