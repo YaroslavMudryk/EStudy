@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EStudy.Domain.Models.University
 {
@@ -11,7 +12,7 @@ namespace EStudy.Domain.Models.University
         public string CodeEDEBO { get; set; }
         [Required, StringLength(30, MinimumLength = 2)]
         public string ShortName { get; set; }
-        [Required]
+        [Required, StringLength(300, MinimumLength = 5)]
         public string EnName { get; set; }
         [StringLength(12)]
         public string IdentityCode { get; set; }
@@ -32,8 +33,9 @@ namespace EStudy.Domain.Models.University
         [StringLength(250)]
         public string Photo { get; set; }
         [StringLength(5000)]
-        public string History { get; set; }
+        public string About { get; set; }
         [StringLength(15)]
         public string YearOfFoundation { get; set; }
+        public List<Institute> Institutes { get; set; }
     }
 }
